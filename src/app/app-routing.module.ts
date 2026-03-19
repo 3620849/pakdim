@@ -15,7 +15,7 @@ import { UserPageComponent } from './projects/ta9/user-page/user-page.component'
 
 const routes: Routes = [
   { path: 'dim', component: DimComponent },
-  { path: 'pak', component: HomeComponent, title: 'Nadya Pak'},
+  { path: 'pak', component: HomeComponent },
   // { path: 'stanley', component: StanleyComponent },
   // {
   //   path: 'ta9', component: Ta9Component, children: [
@@ -26,22 +26,22 @@ const routes: Routes = [
   // },
   { path: 'listMode', component: AppEventList },
   {
-    path: 'kino', component: KinoComponent,
+    path: 'kino',
+    component: KinoComponent,
     children: [
       {
-        path: 'login', component: LoginComponent,
+        path: 'login',
+        component: LoginComponent,
       },
       { path: '', component: HomePageComponent },
       { path: 'userAccount', component: UserAccountComponent },
-      { path: 'filmDescription/:id', component: FilmDescriptionComponent }
-    ]
+      { path: 'filmDescription/:id', component: FilmDescriptionComponent },
+    ],
   },
-
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
