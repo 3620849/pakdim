@@ -1,0 +1,39 @@
+Dima Shanin
+Phone: +972584553692 Email: shanin.tlv@gmail.com Location:Israel,center
+websites: https://www.linkedin.com/in/dima-shanin pakdim.com/dim
+Full stack software engineer	10 years of experience
+Experienced Full-Stack Software Engineer with 10 years of hands-on experience developing scalable web and backend systems using Python, Java, Angular, React and AWS. Strong background in designing RESTful APIs, Microservice architecture, modern frontend architecture, and cloud-native applications. Known for self-driven learning, cross-functional collaboration, and high-quality code delivery. Passionate about robotics, AI tools, and solving complex technical problems
+
+Skills
+▪Backend: Python, FastApi, Java,  Spring Boot, Hibernate, Junit, Kafka, RabbitMQ, Grafana
+▪Frontend: React , Angular 20, JavaScript, TypeScript, RxJs, NgRx, PrimeNG, SyncFusion
+▪Used Technologies: Amazon  AWS, CDN CloudFront, S3, Lambda, EC2,GCP
+▪Databases: MySQL,Redis, MongoDB, Couchbase, OrientDb, Solr
+▪AI tools: cursor, antigravity, gemini cli, obsidian, grock, chat gpt, custom ai models, RAG
+
+Experience
+01/01/21 – 01/03/26 Company: "TA 9 ltd" (Tel Aviv, Israel), Full stack software engineer 
+▪Development application for Intelligence service, which allow connect to any user database and help in investigation actions.
+▪Design and implementation of Authentication and Authorization services, SSO
+▪Responsible for implementation REST API logic and architecture of application, development of new features of application, migration legacy code from Jersey JAX-RS to Spring Boot at frontend migration AngularJS to Angular 20, implemented http and ws services for client-server comunication
+▪Used in work Python, FastAPI, Grafana, Java, Spring Boot, RabbitMQ, Swagger and databases MySQL, OrientDb, Solr
+
+01/09/18 – 01/01/21 Company: "Dialogic Networks" (Petach Tikva, Israel), Full stack software engineer 
+▪Development admin part for communication equipment of VoIP such as Session Border Controllers and Control Switches.
+▪Was responsible for implementation new features and supporting existed code
+▪Back-end based on Java, Spring Boot, Couchbase
+▪Development user interface based on web client using Angular 8, PrimeNG
+
+01/10/17 – 01/09/18 Company:"DellEMC"(Beersheba, Israel), Backend Developer
+▪Java based back-end application development in project “Comilion” using Spring Boot, MongoDB, Splunk, RabbitMQ
+▪Integrating between “Comilion” – A decentralized collaborative security ecosystem and other data collection and collaboration systems using REST API
+▪Adding software tracing capabilities using Spring Sleuth and Zipkin
+
+01/09/15 – 01/07/17 Company:"Tel-ran ltd" (Rehovot, Israel), Backend Developer
+▪Java server side development for a software solution which helps people collect the documents they need in order to immigrate to a different country
+
+Education
+2011-2012: Computer academy, programming courses - Professional training for Java
+2005-2011: The Kiev National Economy University  - International Economy and Business
+LANGUAGES		   English ,Hebrew, Ukranian, Russian
+
