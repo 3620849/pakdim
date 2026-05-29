@@ -12,8 +12,10 @@ import { StanleyComponent } from './projects/stanley/stanley.component';
 import { AdminPageComponent } from './projects/ta9/admin-page/admin-page.component';
 import { Ta9Component } from './projects/ta9/ta9.component';
 import { UserPageComponent } from './projects/ta9/user-page/user-page.component';
+import { PortalComponent } from './portal/portal.component';
 
 const routes: Routes = [
+  { path: '', component: PortalComponent },
   { path: 'dim', component: DimComponent },
   { path: 'pak', component: HomeComponent },
   // { path: 'stanley', component: StanleyComponent },

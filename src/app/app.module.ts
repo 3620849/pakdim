@@ -14,10 +14,12 @@ import { Ta9Module } from './projects/ta9/ta9.module';
 import { EventListModule } from './projects/listmod/event-list.module';
 import { KinoModule } from './projects/kino/kino.module';
 import { DimModule } from './dim/dim.module';
+import { PortalComponent } from './portal/portal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PortalComponent
   ],
 
   imports: [

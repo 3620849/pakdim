@@ -109,6 +109,18 @@ $font-sans: 'Inter', sans-serif;
     z-index: 3;
     pointer-events: auto;
 
+    // Dark radial backdrop glow to perfectly blend canvas background with gradient
+    &::before {
+      content: '';
+      position: absolute;
+      width: 140%;
+      height: 140%;
+      background: radial-gradient(circle, #030303 30%, rgba(3, 3, 3, 0.8) 55%, transparent 75%);
+      z-index: -1;
+      pointer-events: none;
+      filter: blur(10px);
+    }
+
     @media (min-width: 768px) {
       width: 70vmin;
       height: 70vmin;
@@ -126,6 +138,10 @@ $font-sans: 'Inter', sans-serif;
       opacity: 0.8;
       transform: translate3d(0, 0, 0);
       transition: filter 0.5s ease, opacity 0.5s ease;
+
+      // Radial mask to smoothly fade the square borders of the JPG canvas
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 90%);
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 90%);
 
       @media (min-width: 768px) {
         filter: drop-shadow(0 0 60px rgba(0, 0, 0, 0.95)) contrast(1.15) brightness(0.85);

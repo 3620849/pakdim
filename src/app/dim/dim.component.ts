@@ -27,6 +27,7 @@ export class DimComponent implements OnInit, AfterViewInit, OnDestroy {
       this.drawFrame(0);
     }
     this.initScrollReveal();
+    this.checkIntroVisibility();
   }
 
   preloadImages() {
@@ -57,6 +58,7 @@ export class DimComponent implements OnInit, AfterViewInit, OnDestroy {
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     this.requestFrameUpdate();
+    this.checkIntroVisibility();
   }
 
   @HostListener('window:mousemove', ['$event'])
@@ -151,6 +153,13 @@ export class DimComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   initScrollReveal() {
+    // Defensive check: If IntersectionObserver is not supported (SSR, old browsers), reveal all immediately.
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+      const revealElements = document.querySelectorAll('.reveal-element');
+      revealElements.forEach(el => el.classList.add('in-view'));
+      return;
+    }
+
     const options = {
       root: null,
       rootMargin: '0px 0px -50% 0px', // Active region is top half of screen; reveals/hides at 50% viewport height
@@ -162,13 +171,35 @@ export class DimComponent implements OnInit, AfterViewInit, OnDestroy {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
         } else {
-          entry.target.classList.remove('in-view');
+          // Only remove in-view if the scroll position is past the intro section
+          // to prevent the intro elements from flickering when returning to the very top.
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          if (entry.target.classList.contains('intro-titles') || entry.target.classList.contains('scroll-indicator')) {
+            if (scrollTop >= 150) {
+              entry.target.classList.remove('in-view');
+            }
+          } else {
+            entry.target.classList.remove('in-view');
+          }
         }
       });
     }, options);
 
     const revealElements = document.querySelectorAll('.reveal-element');
     revealElements.forEach(el => this.revealObserver?.observe(el));
+  }
+
+  checkIntroVisibility() {
+    if (typeof document === 'undefined') return;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const introTitles = document.querySelector('.intro-titles');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+
+    // Force intro section to be visible when at the top of the page
+    if (scrollTop < 150) {
+      introTitles?.classList.add('in-view');
+      scrollIndicator?.classList.add('in-view');
+    }
   }
 
   ngOnDestroy(): void {
