@@ -1,16 +1,343 @@
 <div class="dim-container">
-	<div class="face-container">
-        <app-face></app-face>        
+  <!-- Fixed Cinematic Background for 3D Gear and Lighting -->
+  <div class="hero-canvas-container">
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="spotlight"></div>
+    
+    <!-- Centered Gear Canvas -->
+    <div class="canvas-wrapper">
+      <canvas #gearCanvas class="gear-canvas"></canvas>
+      <div class="gear-lens-flare"></div>
     </div>
-	
-    <div class="links-menu">
-        <div class="link-item" (click)="redirectTo('https://github.com/3620849')"><i class="bi bi-github"></i></div>
-        <div class="link-item" (click)="redirectTo('https://www.linkedin.com/in/dima-shanin/')"><i class="bi bi-linkedin"></i></div>
-        <div class="link-item" (click)="redirectTo('https://www.facebook.com/DimyD')"><i class="bi bi-facebook"></i></div>  
-        <!-- <div class="link-item"><i class="bi bi-emoji-sunglasses"></i></div>   -->
-        <div class="link-item" (click)="redirectTo('./assets/dimcv.txt')"><i class="bi bi-filetype-doc"></i></div>     
-    </div>
-	<div class="headbox"><app-head></app-head>
-	</div>
-	
-</div>
+  </div>
+
+  <!-- Scrollable Foreground Sections -->
+  <div class="scroll-content">
+    
+    <!-- Section 1: Cinematic Intro -->
+    <section class="viewport-section intro-section">
+      <div class="glass-header">
+        <span class="system-status"><span class="pulse-dot"></span> ENG.STATUS: ACTIVE // ISRAEL</span>
+        <span class="spec-label">shanin.tlv@gmail.com</span>
+      </div>
+      
+      <div class="intro-titles reveal-element reveal-scale">
+        <div class="badge-container">
+          <span class="futuristic-badge">FULL STACK SOFTWARE ENGINEER // 10 YEARS EXP</span>
+        </div>
+        <h1 class="main-title">DIMA SHANIN</h1>
+        <p class="subtitle">SCALABLE ARCHITECTURE & DIGITAL SYSTEMS</p>
+      </div>
+
+      <div class="scroll-indicator reveal-element reveal-fade">
+        <span class="scroll-text">SCROLL TO ROTATE ENGINE & DISCOVER SYSTEM</span>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Executive Profile Brief -->
+    <section class="viewport-section content-section">
+      <div class="glass-card vision-card reveal-element reveal-fade">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <span class="tech-number">01 //</span>
+          <h2 class="card-title">EXECUTIVE ARCHITECT BRIEF</h2>
+        </div>
+        <div class="card-body">
+          <p class="premium-lead">Orchestrating high-performance digital systems with absolute mechanical synchronization.</p>
+          <p class="tech-desc">Experienced Full-Stack Software Engineer with a decade of hands-on mastery in constructing highly scalable web and backend applications using Python, Java, React, Angular 20, and AWS. Proven architect in microservice engineering, modern frontend design systems, and secure RESTful pipelines. Passionate about robotics, RAG/AI integration, and mathematical problem-solving.</p>
+        </div>
+        <div class="card-footer">
+          <span class="spec-tag">BACKEND // PYTHON & JAVA</span>
+          <span class="spec-tag">FRONTEND // ANGULAR 20 & REACT</span>
+          <span class="spec-tag">CLOUD // AWS NATIVE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Professional Experience History -->
+    <section class="viewport-section content-section timeline-section">
+      <div class="experience-timeline">
+        <div class="timeline-header reveal-element reveal-fade">
+          <span class="tech-number">02 //</span>
+          <h2 class="section-main-title">PRODUCTION WORKFLOWS</h2>
+        </div>
+
+        <div class="timeline-items">
+          
+          <!-- Role 1: TA 9 -->
+          <div class="glass-card timeline-card reveal-element reveal-left">
+            <div class="card-glow"></div>
+            <div class="role-meta">
+              <span class="role-date">01/2021 – 03/2026</span>
+              <span class="role-company">TA 9 LTD // TEL AVIV</span>
+            </div>
+            <h3 class="role-title">Full Stack Software Engineer</h3>
+            <div class="role-body">
+              <p class="role-summary">Developed highly secure intelligence applications allowing integrations with arbitrary customer databases to power complex search and investigation pipelines.</p>
+              <ul class="role-bullets">
+                <li>Engineered authentication/authorization architectures, single sign-on (SSO), and WS/HTTP communication protocols.</li>
+                <li>Migrated legacy structures from Jersey JAX-RS to Spring Boot, and ported frontend architectures from AngularJS to Angular 20.</li>
+                <li>Utilized Python, FastAPI, Java, Spring Boot, RabbitMQ, Grafana, Swagger, MySQL, OrientDb, and Solr.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 2: Dialogic Networks -->
+          <div class="glass-card timeline-card reveal-element reveal-right">
+            <div class="card-glow"></div>
+            <div class="role-meta">
+              <span class="role-date">09/2018 – 01/2021</span>
+              <span class="role-company">DIALOGIC NETWORKS // PETACH TIKVA</span>
+            </div>
+            <h3 class="role-title">Full Stack Software Engineer</h3>
+            <div class="role-body">
+              <p class="role-summary">Architected the administration control systems for enterprise communication and VoIP nodes including Session Border Controllers and Control Switches.</p>
+              <ul class="role-bullets">
+                <li>Responsible for the end-to-end design, support, and implementation of new VoIP admin system features.</li>
+                <li>Programmed microservices backend on Java and Spring Boot, coupled with Couchbase databases.</li>
+                <li>Constructed responsive client interfaces utilizing Angular 8 and PrimeNG framework.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 3: DellEMC -->
+          <div class="glass-card timeline-card reveal-element reveal-left">
+            <div class="card-glow"></div>
+            <div class="role-meta">
+              <span class="role-date">10/2017 – 09/2018</span>
+              <span class="role-company">DELLEMC // BEERSHEBA</span>
+            </div>
+            <h3 class="role-title">Backend Developer</h3>
+            <div class="role-body">
+              <p class="role-summary">Engineered backend nodes for "Comilion", a decentralized collaborative cybersecurity ecosystem.</p>
+              <ul class="role-bullets">
+                <li>Integrated the security engine with third-party data aggregation layers via RESTful APIs.</li>
+                <li>Leveraged Java, Spring Boot, MongoDB, Splunk, and RabbitMQ to manage ingestion lines.</li>
+                <li>Added distributed system tracing and observability using Spring Sleuth and Zipkin frameworks.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 4: Tel-ran -->
+          <div class="glass-card timeline-card reveal-element reveal-right">
+            <div class="card-glow"></div>
+            <div class="role-meta">
+              <span class="role-date">09/2015 – 07/2017</span>
+              <span class="role-company">TEL-RAN LTD // REHOVOT</span>
+            </div>
+            <h3 class="role-title">Backend Developer</h3>
+            <div class="role-body">
+              <p class="role-summary">Developed the server-side documentation pipeline engine helping prospective immigrants compile visa documentation.</p>
+              <ul class="role-bullets">
+                <li>Built automated document ingestion, parsing, and state checking utilizing Java server modules.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Tech Stack Spec Matrix -->
+    <section class="viewport-section content-section specs-section">
+      <div class="specs-title-block reveal-element reveal-fade">
+        <span class="tech-number">03 //</span>
+        <h2 class="section-main-title">HARDWARE & SOFTWARE SPECIFICATIONS</h2>
+      </div>
+
+      <div class="grid-container">
+        
+        <!-- Backend Matrix -->
+        <div class="glass-card grid-card reveal-element reveal-left">
+          <div class="card-glow"></div>
+          <div class="tech-icon"><i class="bi bi-cpu"></i></div>
+          <h3 class="grid-card-title">BACKEND ENGINES</h3>
+          <div class="spec-tags-grid">
+            <span class="spec-tag-active">Python</span>
+            <span class="spec-tag-active">FastAPI</span>
+            <span class="spec-tag-active">Java</span>
+            <span class="spec-tag-active">Spring Boot</span>
+            <span class="spec-tag-active">Hibernate</span>
+            <span class="spec-tag-active">Kafka</span>
+            <span class="spec-tag-active">RabbitMQ</span>
+            <span class="spec-tag-active">Grafana</span>
+            <span class="spec-tag-active">JUnit</span>
+          </div>
+        </div>
+
+        <!-- Frontend Matrix -->
+        <div class="glass-card grid-card reveal-element reveal-right">
+          <div class="card-glow"></div>
+          <div class="tech-icon"><i class="bi bi-lightning-charge"></i></div>
+          <h3 class="grid-card-title">FRONTEND INTERFACES</h3>
+          <div class="spec-tags-grid">
+            <span class="spec-tag-active">React</span>
+            <span class="spec-tag-active">Angular 20</span>
+            <span class="spec-tag-active">TypeScript</span>
+            <span class="spec-tag-active">JavaScript</span>
+            <span class="spec-tag-active">RxJS</span>
+            <span class="spec-tag-active">NgRx</span>
+            <span class="spec-tag-active">PrimeNG</span>
+            <span class="spec-tag-active">SyncFusion</span>
+          </div>
+        </div>
+
+        <!-- Cloud & DB Matrix -->
+        <div class="glass-card grid-card reveal-element reveal-left">
+          <div class="card-glow"></div>
+          <div class="tech-icon"><i class="bi bi-server"></i></div>
+          <h3 class="grid-card-title">CLOUD & DATA STORES</h3>
+          <div class="spec-tags-grid">
+            <span class="spec-tag-active">Amazon AWS</span>
+            <span class="spec-tag-active">Lambda / EC2</span>
+            <span class="spec-tag-active">CloudFront CDN</span>
+            <span class="spec-tag-active">GCP</span>
+            <span class="spec-tag-active">MySQL</span>
+            <span class="spec-tag-active">MongoDB</span>
+            <span class="spec-tag-active">Redis</span>
+            <span class="spec-tag-active">Couchbase</span>
+            <span class="spec-tag-active">OrientDb</span>
+            <span class="spec-tag-active">Solr</span>
+          </div>
+        </div>
+
+        <!-- AI Tools Matrix -->
+        <div class="glass-card grid-card reveal-element reveal-right">
+          <div class="card-glow"></div>
+          <div class="tech-icon"><i class="bi bi-robot"></i></div>
+          <h3 class="grid-card-title">INTELLIGENT INTEGRATION</h3>
+          <div class="spec-tags-grid">
+            <span class="spec-tag-active">Antigravity AI</span>
+            <span class="spec-tag-active">Gemini CLI</span>
+            <span class="spec-tag-active">Custom AI Models</span>
+            <span class="spec-tag-active">RAG Systems</span>
+            <span class="spec-tag-active">Cursor IDE</span>
+            <span class="spec-tag-active">Obsidian</span>
+            <span class="spec-tag-active">ChatGPT</span>
+            <span class="spec-tag-active">Grok</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 5: Academic & Linguistics -->
+    <section class="viewport-section content-section timeline-section">
+      <div class="experience-timeline">
+        <div class="timeline-header reveal-element reveal-fade">
+          <span class="tech-number">04 //</span>
+          <h2 class="section-main-title">EDUCATION & LINGUISTICS</h2>
+        </div>
+
+        <div class="grid-container">
+          <!-- Academic -->
+          <div class="glass-card grid-card flex-double reveal-element reveal-left">
+            <div class="card-glow"></div>
+            <h3 class="grid-card-title">EDUCATION</h3>
+            <div class="edu-item">
+              <span class="edu-date">2005 - 2011</span>
+              <span class="edu-desc"><strong>The Kiev National Economy University</strong><br>Master's Degree: International Economy and Business</span>
+            </div>
+            <div class="edu-item" style="margin-top: 1rem;">
+              <span class="edu-date">2011 - 2012</span>
+              <span class="edu-desc"><strong>Computer Academy, Kyiv</strong><br>Professional Software Engineering & Java Training</span>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="glass-card grid-card reveal-element reveal-right">
+            <div class="card-glow"></div>
+            <h3 class="grid-card-title">LINGUISTIC COMPILERS</h3>
+            <ul class="role-bullets" style="margin: 0.5rem 0 0 0;">
+              <li><strong>English</strong> // Professional Node</li>
+              <li><strong>Hebrew</strong> // Operational Node</li>
+              <li><strong>Ukrainian</strong> // Native Node</li>
+              <li><strong>Russian</strong> // Native Node</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: System Conduit (Links Deck) -->
+    <section class="viewport-section link-deck-section">
+      <div class="glass-card links-card reveal-element reveal-scale">
+        <div class="card-glow"></div>
+        <div class="links-title-block">
+          <span class="tech-number">05 //</span>
+          <h2 class="card-title">SYSTEM CONDUIT</h2>
+          <p class="links-subtitle">Establish a secure connection with Dima Shanin.</p>
+        </div>
+
+        <div class="links-grid">
+          
+          <!-- GitHub Link -->
+          <div class="link-glow-wrapper" (click)="redirectTo('https://github.com/3620849')">
+            <div class="link-card-interactive">
+              <div class="icon-block">
+                <i class="bi bi-github"></i>
+              </div>
+              <div class="link-details">
+                <span class="link-label">SOURCE ARCHIVE</span>
+                <span class="link-value">github.com/3620849</span>
+              </div>
+              <div class="chevron-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+          </div>
+
+          <!-- LinkedIn Link -->
+          <div class="link-glow-wrapper" (click)="redirectTo('https://www.linkedin.com/in/dima-shanin/')">
+            <div class="link-card-interactive">
+              <div class="icon-block">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <div class="link-details">
+                <span class="link-label">PROFESSIONAL GRAPH</span>
+                <span class="link-value">linkedin.com/in/dima-shanin</span>
+              </div>
+              <div class="chevron-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+          </div>
+
+          <!-- Facebook Link -->
+          <div class="link-glow-wrapper" (click)="redirectTo('https://www.facebook.com/DimyD')">
+            <div class="link-card-interactive">
+              <div class="icon-block">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <div class="link-details">
+                <span class="link-label">SOCIAL NETWORK NODE</span>
+                <span class="link-value">facebook.com/DimyD</span>
+              </div>
+              <div class="chevron-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+          </div>
+
+          <!-- CV Link -->
+          <div class="link-glow-wrapper" (click)="redirectTo('./assets/dimcv.txt')">
+            <div class="link-card-interactive">
+              <div class="icon-block">
+                <i class="bi bi-file-earmark-arrow-down"></i>
+              </div>
+              <div class="link-details">
+                <span class="link-label">SPECIFICATION DATASHEET</span>
+                <span class="link-value">dimcv.txt (Download Raw CV)</span>
+              </div>
+              <div class="chevron-arrow"><i class="bi bi-arrow-right-short"></i></div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="links-footer">
+          <span class="terminal-text">CONTACT: shanin.tlv@gmail.com // +972 58 455 3692</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>

@@ -35,5 +35,7 @@ Experience
 Education
 2011-2012: Computer academy, programming courses - Professional training for Java
 2005-2011: The Kiev National Economy University  - International Economy and Business
-LANGUAGES		   English ,Hebrew, Ukranian, Russian
+
+LANGUAGES
+English ,Hebrew, Ukranian, Russian
 
